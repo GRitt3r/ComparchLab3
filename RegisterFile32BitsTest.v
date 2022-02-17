@@ -28,11 +28,26 @@ always begin
 
 initial begin
 
-	#10 
-	DIn <= 32'h78493052;
-	#10 WrtAdd <= 5'd01;
-	#20 DIn <= 32'h73245243;
+    WrtAdd <= 5'd01;
+	#40 DIn <= 32'd15;
+	#40 DIn <= 32'd423;
 	WrtAdd <= 5'd02;
+	#40 DIn <= 32'd43;
+	WrtAdd <= 5'd03;
+	#40 DIn <= 32'd23;
+	WrtAdd <= 5'd04;
+	#40 DIn <= 32'd3;
+	WrtAdd <= 5'd05;
+	#40 DIn <= 32'd67;
+	WrtAdd <= 5'd06;
+	#40 RdAdd1 <= 5'd01;
+	#20 RdAdd2 <= 5'd02;
+	#20 RdAdd1 <= 5'd03;
+	#20 RdAdd2 <= 5'd04;
+	#20 RdAdd1 <= 5'd05;
+	#20 RdAdd2 <= 5'd06;
+	#200;
+	
 
 	$stop;
 end
